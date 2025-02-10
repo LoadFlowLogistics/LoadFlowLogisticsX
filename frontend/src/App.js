@@ -40,15 +40,4 @@ const App = () => {
             {result && (
                 <div style={{ marginTop: '20px', padding: '10px', border: '1px solid #ccc' }}>
                     <h2>Results:</h2>
-                    <p><strong>Distance:</strong> {result.distance} miles</p>
-                    <p><strong>Fuel Price:</strong> ${result.fuel_price}</p>
-                    <p><strong>Base Rate Per Mile:</strong> ${result.base_rate_per_mile}</p>
-                    <p><strong>Fuel Surcharge:</strong> ${result.fuel_surcharge}</p>
-                    <p><strong>Total Freight Cost:</strong> ${result.total_freight_cost}</p>
-                </div>
-            )}
-        </div>
-    );
-};
-
-export default App;
+                    <p><strong>Dista
