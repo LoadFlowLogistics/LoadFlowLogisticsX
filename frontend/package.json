@@ -1,0 +1,6 @@
+{
+  "name": "loadflow-frontend",
+  "dependencies": {
+    "react": "^18.0.0"
+  }
+}
