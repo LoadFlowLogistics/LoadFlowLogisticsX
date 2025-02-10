@@ -27,24 +27,24 @@ const App = () => {
     };
 
     return (
-        <div>
+        <div style={{ padding: '20px', maxWidth: '500px', margin: 'auto', textAlign: 'center' }}>
             <h1>Freight Cost Calculator</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="origin" placeholder="Origin" onChange={handleChange} />
-                <input type="text" name="destination" placeholder="Destination" onChange={handleChange} />
-                <input type="number" name="weight" placeholder="Weight (lbs)" onChange={handleChange} />
-                <input type="text" name="freightClass" placeholder="Freight Class" onChange={handleChange} />
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <input type="text" name="origin" placeholder="Origin" onChange={handleChange} required />
+                <input type="text" name="destination" placeholder="Destination" onChange={handleChange} required />
+                <input type="number" name="weight" placeholder="Weight (lbs)" onChange={handleChange} required />
+                <input type="text" name="freightClass" placeholder="Freight Class" onChange={handleChange} required />
                 <button type="submit">Calculate</button>
             </form>
 
             {result && (
-                <div>
+                <div style={{ marginTop: '20px', padding: '10px', border: '1px solid #ccc' }}>
                     <h2>Results:</h2>
-                    <p>Distance: {result.distance} miles</p>
-                    <p>Fuel Price: ${result.fuel_price}</p>
-                    <p>Base Rate Per Mile: ${result.base_rate_per_mile}</p>
-                    <p>Fuel Surcharge: ${result.fuel_surcharge}</p>
-                    <p>Total Freight Cost: ${result.total_freight_cost}</p>
+                    <p><strong>Distance:</strong> {result.distance} miles</p>
+                    <p><strong>Fuel Price:</strong> ${result.fuel_price}</p>
+                    <p><strong>Base Rate Per Mile:</strong> ${result.base_rate_per_mile}</p>
+                    <p><strong>Fuel Surcharge:</strong> ${result.fuel_surcharge}</p>
+                    <p><strong>Total Freight Cost:</strong> ${result.total_freight_cost}</p>
                 </div>
             )}
         </div>
